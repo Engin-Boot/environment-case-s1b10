@@ -17,14 +17,22 @@ jobs:
     - name: install cppcheck static analysis
       run: sudo apt-get update && sudo apt-get install -y cppcheck
       
-    - name: build
-      run: g++ -Wall -Wextra -Werror --coverage -o testchecker *.cpp
-      
+    - name: build Sender
+      run: g++ -Wall -Wextra -Werror --coverage -o SenderExe Sender/Sender.cpp
+
+    - name: build Receiver
+      run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/Receiver.cpp
+ 
     - name: static analysis
       run: cppcheck --enable=all --error-exitcode=1 .
       
     - name: run
-      run: ./testchecker
+      run: ./SenderExe | ./ReceiverExe
     
-    - name: coverage report
-      run: gcov -r *.cpp
+    - name: coverage report Sender
+
+      run: gcov -r Sender/SenderCheck.cpp
+
+    - name: coverage report Receiver
+
+      run: gcov -r Receiver/ReceiverCheck.cpp
