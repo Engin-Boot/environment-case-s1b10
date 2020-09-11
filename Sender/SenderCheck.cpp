@@ -6,7 +6,7 @@
 #include<vector>
 #include<iterator>
 #include<algorithm>
-#include<Sender.h>
+#include<SenderCheck.h>
 
 /*
 * Parses through csv file line by line and returns the data
