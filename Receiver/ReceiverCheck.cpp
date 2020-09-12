@@ -45,8 +45,6 @@ vector<float> humidity = reader.humidityFetch();
 
 vector<float> temperature = reader.temperatureFetch();
 
-ReceiverClass obj1;
-
 bool temperatureWarning(vector<float> temperature)
 {
   for(float temp:temperature)
