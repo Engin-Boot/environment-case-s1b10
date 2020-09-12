@@ -10,8 +10,8 @@ using namespace std;
 
 class CSVReader
 {
-     string fileName;
 public:
+     string fileName;
      vector<float> temperatureFetch();
      vector<float> humidityFetch();
      CSVReader(string filename): fileName(filename) { }
