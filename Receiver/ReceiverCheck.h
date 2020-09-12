@@ -20,8 +20,8 @@ public:
 class ReceiverClass
 {
 public:
-     bool temperatureWarning();
-     bool temperatureError();
-     bool humidityWarning();
-     bool humidityError();
+     bool temperatureWarning(vector<float>);
+     bool temperatureError(vector<float>);
+     bool humidityWarning(vector<float>);
+     bool humidityError(vector<float>);
 };
