@@ -12,28 +12,28 @@ vector<float> humidity = reader.humidityFetch();
 
 TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
 {
-  bool warningcheck = obj.temperatureWarning(temperature);
+  obj.temperatureWarning(temperature);
   
-  REQUIRE(warningcheck == true);
+  REQUIRE(option == 1);
 }
 
 TEST_CASE("Generate error if Temperature >= 40 C or if Temperature <= 0 C")
 {
-  bool errorcheck = obj.temperatureError(temperature);
+  obj.temperatureError(temperature);
   
-  REQUIRE(errorcheck == true);
+  REQUIRE(option == 2);
 }
 
 TEST_CASE("Generate warning if Humidity >= 70%")
 {
-  bool warningcheck = obj.humidityWarning(humidity);
+  obj.humidityWarning(humidity);
   
-  REQUIRE(warningcheck == true);
+  REQUIRE(option == 3);
 }
 
 TEST_CASE("Generate error if Humidity >= 90%")
 {
-  bool errorcheck = obj.humidityError(humidity);
+  obj.humidityError(humidity);
   
-  REQUIRE(warningcheck == true);
+  REQUIRE(option == 4);
 }
