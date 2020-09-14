@@ -10,6 +10,8 @@ CSVReader reader("Testdata/dataset.csv");
 vector<float> temperature = reader.temperatureFetch();
 vector<float> humidity = reader.humidityFetch();
 
+int option = 0;
+
 TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
 {
   obj.temperatureWarning(temperature);
