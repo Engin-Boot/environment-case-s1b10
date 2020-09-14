@@ -45,7 +45,7 @@ vector<float> humidity = reader.humidityFetch();
 
 vector<float> temperature = reader.temperatureFetch();
 
-bool temperatureWarning(vector<float> temperature)
+bool ReceiverClass::temperatureWarning(vector<float> temperature)
 {
   for(float temp:temperature)
   {
@@ -61,7 +61,7 @@ bool temperatureWarning(vector<float> temperature)
   }
 }
 
-bool temperatureError(vector<float> temperature)
+bool ReceiverClass::temperatureError(vector<float> temperature)
 {
   for(float temp:temperature)
   {
@@ -77,7 +77,7 @@ bool temperatureError(vector<float> temperature)
   }
 }
        
-bool humidityWarning(vector<float> humidity)
+bool ReceiverClass::humidityWarning(vector<float> humidity)
 {
   for(float hum:humidity)
   {
@@ -93,7 +93,7 @@ bool humidityWarning(vector<float> humidity)
   }
 }
        
-bool humidityError(vector<float> humidity)
+bool ReceiverClass::humidityError(vector<float> humidity)
 {
   for(float hum:humidity)
   {
