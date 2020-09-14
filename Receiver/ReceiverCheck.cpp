@@ -52,13 +52,10 @@ bool ReceiverClass::temperatureWarning(vector<float> temperature)
     if((temp >= 37 && temp < 40)||(temp <= 4 && temp > 0))
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
-      return true;
-    }
-    else
-    {
-    return false;
+     
     }
   }
+   return true;
 }
 
 bool ReceiverClass::temperatureError(vector<float> temperature)
