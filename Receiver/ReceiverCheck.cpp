@@ -45,63 +45,52 @@ vector<float> humidity = reader.humidityFetch();
 
 vector<float> temperature = reader.temperatureFetch();
 
-bool ReceiverClass::temperatureWarning(vector<float> temperature)
+int option = 0;
+
+void ReceiverClass::temperatureWarning(vector<float> temperature)
 {
   for(float temp:temperature)
   {
     if((temp >= 37 && temp < 40)||(temp <= 4 && temp > 0))
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
-     
+      option = 1;  
     }
-  }
-   return true;
+  }  
 }
 
-bool ReceiverClass::temperatureError(vector<float> temperature)
+void ReceiverClass::temperatureError(vector<float> temperature)
 {
   for(float temp:temperature)
   {
     if(temp >= 40 || temp <= 0)
     {
       cout << "Error: Current temperature is " << temp << " C" << endl;
-      return true;
-    }
-    else
-    {
-    return false;
+      option = 2;
     }
   }
 }
        
-bool ReceiverClass::humidityWarning(vector<float> humidity)
+void ReceiverClass::humidityWarning(vector<float> humidity)
 {
   for(float hum:humidity)
   {
     if(hum >= 70 && hum < 90)
     {
       cout<< "Warning: Current Humidity is " << hum << " %" << endl;
-      return true;
-    }
-    else
-    {
-    return false;
+      option = 3;
     }
   }
 }
        
-bool ReceiverClass::humidityError(vector<float> humidity)
+void ReceiverClass::humidityError(vector<float> humidity)
 {
   for(float hum:humidity)
   {
     if(hum >= 90)
     {
       cout<< "Error: Current Humidity is " << hum << " %" << endl;
-      return true;
-    }
-    else
-    {
-    return false;
+      option = 4;
     }
   }
 }
