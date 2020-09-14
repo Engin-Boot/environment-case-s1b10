@@ -1,12 +1,9 @@
-#define CATCH_CONFIG_RUNNER
+#define CATCH_CONFIG_MAIN
 
 #include<vector>
 #include "catch.hpp"
 #include "ReceiverCheck.h"
 using namespace std;
-
-int main()
-{
 
 ReceiverClass obj;
 CSVReader reader("Testdata/dataset.csv");
@@ -40,5 +37,4 @@ TEST_CASE("Generate error if Humidity >= 90%")
   
   REQUIRE(option == 4);
 }
-  return 0;
-}
+ 
