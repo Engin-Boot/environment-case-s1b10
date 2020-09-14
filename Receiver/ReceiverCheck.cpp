@@ -4,8 +4,7 @@ using namespace std;
 
 CSVReader reader("Testdata/dataset.csv");
 
-int main()
-{
+
 
 vector<float> CSVReader::temperatureFetch()
 {
@@ -97,5 +96,7 @@ void ReceiverClass::humidityError(vector<float> humidity)
     }
   }
 }
+int main()
+{
 return 0;
 }
