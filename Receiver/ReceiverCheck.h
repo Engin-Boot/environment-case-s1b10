@@ -11,7 +11,7 @@ using namespace std;
 class CSVReader
 {
 public:
-     explicit string fileName;
+     string fileName;
      vector<float> temperatureFetch();
      vector<float> humidityFetch();
      CSVReader(string filename): fileName(filename) { }
