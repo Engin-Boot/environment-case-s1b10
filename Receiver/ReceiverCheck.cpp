@@ -54,7 +54,10 @@ bool temperatureWarning(vector<float> temperature)
       cout << "Warning: Current temperature is " << temp << " C" << endl;
       return true;
     }
+    else
+    {
     return false;
+    }
   }
 }
 
