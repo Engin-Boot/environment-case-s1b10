@@ -70,7 +70,10 @@ bool temperatureError(vector<float> temperature)
       cout << "Error: Current temperature is " << temp << " C" << endl;
       return true;
     }
+    else
+    {
     return false;
+    }
   }
 }
        
@@ -83,7 +86,10 @@ bool humidityWarning(vector<float> humidity)
       cout<< "Warning: Current Humidity is " << hum << " %" << endl;
       return true;
     }
+    else
+    {
     return false;
+    }
   }
 }
        
@@ -96,6 +102,9 @@ bool humidityError(vector<float> humidity)
       cout<< "Error: Current Humidity is " << hum << " %" << endl;
       return true;
     }
+    else
+    {
     return false;
+    }
   }
 }
