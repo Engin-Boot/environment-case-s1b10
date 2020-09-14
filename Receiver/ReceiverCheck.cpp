@@ -26,7 +26,7 @@ vector<float> CSVReader::humidityFetch()
 {
   vector<float> data;
   ifstream file(fileName);
-  str line = "";
+  string line = "";
   string humidity = "";
   
   while(getline(file,line))
