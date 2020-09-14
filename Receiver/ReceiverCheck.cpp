@@ -62,7 +62,7 @@ bool temperatureError(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-    if((temp >= 40 || temp <= 0)
+    if(temp >= 40 || temp <= 0)
     {
       cout << "Error: Current temperature is " << temp << " C" << endl;
       return true;
