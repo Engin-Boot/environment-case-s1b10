@@ -11,8 +11,8 @@ vector<float> CSVReader::temperatureFetch()
   string line = "";
   string temperature = "";
   
-  getline(cin,line);
-  while(getline(cin,line))
+  getline(file,line);
+  while(getline(file,line))
   {
     stringstream str(line);
     
@@ -140,17 +140,17 @@ void ReceiverClass::humidityError(vector<float> humidity)
 
 int main()
 {
-  CSVReader reader2("Testdata/dataset.csv");
+  //CSVReader reader2("Testdata/dataset.csv");
    ReceiverClass receiverObj;
-vector<float> data1 = reader2.temperatureFetch();
-  vector<float> data2 = reader2.humidityFetch();
+vector<float> data1 = receiverObj.temperatureFetch();
+  vector<float> data2 = receiverObj.humidityFetch();
   
   if(data1.size()!= 0)
   {
-    receiverObj.temperatureWarningLow(temperature);
-    receiverObj.temperatureWarningHigh(temperature);
-    receiverObj.temperatureErrorHigh(temperature);
-    receiverObj.temperatureErrorLow(temperature);
+    receiverObj.temperatureWarningLow(temperatureFetch);
+    receiverObj.temperatureWarningHigh(temperatureFetch);
+    receiverObj.temperatureErrorHigh(temperatureFetch);
+    receiverObj.temperatureErrorLow(temperatureFetch);
       
   }
   else
