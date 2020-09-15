@@ -12,6 +12,7 @@ vector<float> CSVReader::temperatureFetch()
   string line = "";
   string temperature = "";
   
+  getline(file,line);
   while(getline(file,line))
   {
     stringstream str(line);
@@ -31,6 +32,7 @@ vector<float> CSVReader::humidityFetch()
   string line = "";
   string humidity = "";
   
+  getline(file,line);
   while(getline(file,line))
   {
     stringstream str(line);
