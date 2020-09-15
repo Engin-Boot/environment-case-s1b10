@@ -2,7 +2,9 @@
 
 using namespace std;
 
-void Temperature(float);
+void TempLow(float);
+void TempHigh(float);
+void HumidHigh(float);
 
 CSVReader reader("Testdata/dataset.csv");
 
@@ -55,11 +57,11 @@ void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-   TemperatureCheck(temp);
+   TempLow(temp);
   }  
 }
 
-void ReceiverClass::TemperatureCheck(float temp)
+void TempLow(float temp)
 {
    if(temp <= 4 && temp > 0)
     {
@@ -73,14 +75,18 @@ void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-    if(temp >= 37 && temp < 40)
+    TempHigh(temp);
+  }
+}
+
+void TempHigh(float temp)
+{
+  if(temp >= 37 && temp < 40)
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
       checker.option = 1;
     }
-  }
 }
-
 
 void ReceiverClass::temperatureErrorLow(vector<float> temperature)
 {
@@ -110,12 +116,17 @@ void ReceiverClass::humidityWarning(vector<float> humidity)
 {
   for(float hum:humidity)
   {
-    if(hum >= 70 && hum < 90)
+    HumidHigh(hum);
+  }
+}
+
+void HumidHigh(float hum)
+{
+  if(hum >= 70 && hum < 90)
     {
       cout<< "Warning: Current Humidity is " << hum << " %" << endl;
       checker.option = 3;
     }
-  }
 }
        
 void ReceiverClass::humidityError(vector<float> humidity)
