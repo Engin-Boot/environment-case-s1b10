@@ -14,7 +14,7 @@ public:
      string fileName;
      vector<float> temperatureFetch();
      vector<float> humidityFetch();
-     explicit CSVReader(string& filename): fileName(filename) { }
+     explicit CSVReader(const string& filename): fileName(filename) { }
 };
 
 class ReceiverClass
