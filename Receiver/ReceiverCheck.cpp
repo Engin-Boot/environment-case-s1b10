@@ -1,7 +1,7 @@
 #include "../Receiver/ReceiverCheck.h"
 using namespace std;
 
-CSVReader reader("Testdata/dataset.csv");
+//CSVReader reader("Testdata/dataset.csv");
 
 vector<float> CSVReader::temperatureFetch()
 {
@@ -11,8 +11,8 @@ vector<float> CSVReader::temperatureFetch()
   string line = "";
   string temperature = "";
   
-  getline(file,line);
-  while(getline(file,line))
+  getline(cin,line);
+  while(getline(cin,line))
   {
     stringstream str(line);
     
@@ -31,8 +31,8 @@ vector<float> CSVReader::humidityFetch()
   string line = "";
   string humidity = "";
   
-  getline(file,line);
-  while(getline(file,line))
+  getline(cin,line);
+  while(getline(cin,line))
   {
     stringstream str(line);
     
@@ -44,15 +44,15 @@ vector<float> CSVReader::humidityFetch()
   return data2;
 }
 
-vector<float> humidity = reader.humidityFetch();
+//vector<float> humidity = reader.humidityFetch();
 
-vector<float> temperature = reader.temperatureFetch();
+//vector<float> temperature = reader.temperatureFetch();
 
 ReceiverClass checker;
 
-void ReceiverClass::temperatureWarningLow(vector<float> temperature)
+void ReceiverClass::temperatureWarningLow(vector<float> temperatureFetch)
 {
-  for(float temp:temperature)
+  for(float temp:temperatureFetch)
   {
    checker.TempLow(temp);
   }  
