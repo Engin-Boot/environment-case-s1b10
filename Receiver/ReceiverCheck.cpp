@@ -2,10 +2,6 @@
 
 using namespace std;
 
-void TempLow(float);
-void TempHigh(float);
-void HumidHigh(float);
-
 CSVReader reader("Testdata/dataset.csv");
 
 vector<float> CSVReader::temperatureFetch()
@@ -57,11 +53,11 @@ void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-   TempLow(temp);
+   checker.TempLow(temp);
   }  
 }
 
-void TempLow(float temp)
+void ReceiverClass::TempLow(float temp)
 {
    if(temp <= 4 && temp > 0)
     {
@@ -75,11 +71,11 @@ void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-    TempHigh(temp);
+    checker.TempHigh(temp);
   }
 }
 
-void TempHigh(float temp)
+void ReceiverClass::TempHigh(float temp)
 {
   if(temp >= 37 && temp < 40)
     {
@@ -116,11 +112,11 @@ void ReceiverClass::humidityWarning(vector<float> humidity)
 {
   for(float hum:humidity)
   {
-    HumidHigh(hum);
+    checker.HumidHigh(hum);
   }
 }
 
-void HumidHigh(float hum)
+void ReceiverClass::HumidHigh(float hum)
 {
   if(hum >= 70 && hum < 90)
     {
