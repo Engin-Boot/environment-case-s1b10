@@ -3,7 +3,7 @@ using namespace std;
 
 CSVReader reader("Testdata/dataset.csv");
 
-vector<float> CSVReader::temperatureFetch()
+/*vector<float> CSVReader::temperatureFetch()
 {
   vector<float> data;
   
@@ -42,7 +42,7 @@ vector<float> CSVReader::humidityFetch()
     data.push_back(stof(humidity));
   }
   return data;
-}
+}*/
 
 vector<float> humidity = reader.humidityFetch();
 
@@ -140,11 +140,45 @@ void ReceiverClass::humidityError(vector<float> humidity)
 
 int main()
 {
-  void ReceiverClass::temperatureWarningLow(vector<float>);
-  void ReceiverClass::temperatureWarningHigh(vector<float>);
-  void ReceiverClass::temperatureErrorLow(vector<float>);
-  void ReceiverClass::temperatureErrorHigh(vector<float>);
-  void ReceiverClass::humidityWarning(vector<float>);
-  void ReceiverClass::humidityError(vector<float>);
+  vector<float> CSVReader::temperatureFetch()
+{
+  vector<float> data;
+  
+  ifstream file(fileName);
+  string line = "";
+  string temperature = "";
+  
+  getline(file,line);
+  while(getline(file,line))
+  {
+    stringstream str(line);
+    
+    getline(str,temperature,',');
+    
+    data.push_back(stof(temperature));
+    
+  }
+  return data;
+}
+  
+vector<float> CSVReader::humidityFetch()
+{
+  vector<float> data;
+  ifstream file(fileName);
+  string line = "";
+  string humidity = "";
+  
+  getline(file,line);
+  while(getline(file,line))
+  {
+    stringstream str(line);
+    
+    getline(str,humidity,',');
+    getline(str,humidity,',');
+    
+    data.push_back(stof(humidity));
+  }
+  return data;
+}
   return 0;
 }
