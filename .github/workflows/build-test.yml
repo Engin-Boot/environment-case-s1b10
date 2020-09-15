@@ -27,8 +27,11 @@ jobs:
       run: cppcheck --enable=all --check-config --error-exitcode=1 .
       
     - name: run
-      run: ./SenderExe | ./ReceiverExe
-    
+      run: ./SenderExe
+      
+    -name: run
+     run: ./ReceiverExe
+     
     - name: coverage report Sender
 
       run: gcov -r SenderCheck.cpp
