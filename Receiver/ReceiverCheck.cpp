@@ -53,14 +53,20 @@ void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-    if(temp <= 4 && temp > 0)
+   Temperature(temp);
+  }  
+}
+
+void Temperature(temp)
+{
+   if(temp <= 4 && temp > 0)
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
       checker.option = 1;  
     }
-  }  
 }
-
+  
+  
 void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
 {
   for(float temp:temperature)
