@@ -7,6 +7,7 @@ CSVReader reader("Testdata/dataset.csv");
 vector<float> CSVReader::temperatureFetch()
 {
   vector<float> data;
+  
   ifstream file(fileName);
   string line = "";
   string temperature = "";
@@ -16,8 +17,10 @@ vector<float> CSVReader::temperatureFetch()
     stringstream str(line);
     
     getline(str,temperature,',');
+    getline(str,humidity,',');
     
     data.push_back(stof(temperature));
+    
   }
   return data;
 }
@@ -70,6 +73,7 @@ void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
     }
   }
 }
+
 
 void ReceiverClass::temperatureErrorLow(vector<float> temperature)
 {
