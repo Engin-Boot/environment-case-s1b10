@@ -27,7 +27,7 @@ jobs:
       run: cppcheck --suppress=missingIncludeSystem --check-config --error-exitcode=1 -iReceiver/ReceiverCheck.cpp -iSender/SenderCheck.cpp -iReceiver/ReceiverTest.cpp .
       
     - name: run
-      run: ./SenderExe | ./ReceiverExe
+      run: ./ReceiverExe
      
     - name: coverage report Sender
 
