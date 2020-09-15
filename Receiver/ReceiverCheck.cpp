@@ -145,15 +145,21 @@ int main()
 vector<float> data1 = reader2.temperatureFetch();
   vector<float> data2 = reader2.humidityFetch();
   
-  if(data.size()!= 0)
+  if(data1.size()!= 0)
   {
     receiverObj.temperatureWarningLow(temperature);
-    receiverObj.humidityError(humidity);
     receiverObj.temperatureWarningHigh(temperature);
-     receiverObj.temperatureErrorHigh(temperature);
-      receiverObj.temperatureErrorLow(temperature);
-      receiverObj.humidityWarning(humidity);
+    receiverObj.temperatureErrorHigh(temperature);
+    receiverObj.temperatureErrorLow(temperature);
+      
   }
+ 
+  else if(data2.size()!= 0)
+  {
+    receiverObj.humidityWarning(humidity);
+    receiverObj.humidityError(humidity);
+  }
+    
   else
   {
     cout<<"No data received"<<endl;
