@@ -9,18 +9,13 @@
 #include<algorithm>
 using namespace std;
 
-class CSVReader
+class ReceiverClass
 {
 public:
      string fileName;
      vector<float> temperatureFetch();
      vector<float> humidityFetch();
      explicit CSVReader(const string& filename): fileName(filename) { }
-};
-
-class ReceiverClass
-{
-public:
      int option = 0;
      void temperatureWarningLow(vector<float> temperature);
      void temperatureWarningHigh(vector<float> temperature);
