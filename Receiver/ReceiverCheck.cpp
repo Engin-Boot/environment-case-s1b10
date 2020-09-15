@@ -147,10 +147,10 @@ vector<float> data1 = reader2.temperatureFetch();
   
   if(data1.size()!= 0)
   {
-    receiverObj.temperatureWarningLow(temperature);
-    receiverObj.temperatureWarningHigh(temperature);
-    receiverObj.temperatureErrorHigh(temperature);
-    receiverObj.temperatureErrorLow(temperature);
+    receiverObj.temperatureWarningLow(data1);
+    receiverObj.temperatureWarningHigh(data1);
+    receiverObj.temperatureErrorHigh(data1);
+    receiverObj.temperatureErrorLow(data1);
       
   }
   else
@@ -160,8 +160,8 @@ vector<float> data1 = reader2.temperatureFetch();
  
   if(data2.size()!= 0)
   {
-    receiverObj.humidityWarning(humidity);
-    receiverObj.humidityError(humidity);
+    receiverObj.humidityWarning(data2);
+    receiverObj.humidityError(data2);
   }
     
   else
