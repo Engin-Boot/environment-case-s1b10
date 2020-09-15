@@ -23,7 +23,8 @@ public:
      int option = 0;
      void temperatureWarningLow(vector<float>);
      void temperatureWarningHigh(vector<float>);
-     void temperatureError(vector<float>);
+     void temperatureErrorLow(vector<float>);
+     void temperatureErrorHigh(vector<float>);
      void humidityWarning(vector<float>);
      void humidityError(vector<float>);
 };
