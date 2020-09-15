@@ -1,9 +1,9 @@
 #include "../Receiver/ReceiverCheck.h"
 using namespace std;
 
-//CSVReader reader("Testdata/dataset.csv");
+CSVReader reader("Testdata/dataset.csv");
 
-vector<float> ReceiverClass::temperatureFetch()
+vector<float> CSVReader::temperatureFetch()
 {
   vector<float> data1;
   
@@ -24,7 +24,7 @@ vector<float> ReceiverClass::temperatureFetch()
   return data1;
 }
   
-vector<float> ReceiverClass::humidityFetch()
+vector<float> CSVReader::humidityFetch()
 {
   vector<float> data2;
   ifstream file(fileName);
@@ -44,15 +44,15 @@ vector<float> ReceiverClass::humidityFetch()
   return data2;
 }
 
-//vector<float> humidity = reader.humidityFetch();
+vector<float> humidity = reader.humidityFetch();
 
-//vector<float> temperature = reader.temperatureFetch();
+vector<float> temperature = reader.temperatureFetch();
 
 ReceiverClass checker;
 
-void ReceiverClass::temperatureWarningLow(vector<float> temperatureFetch)
+void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
-  for(float temp:temperatureFetch)
+  for(float temp:temperature)
   {
    checker.TempLow(temp);
   }  
@@ -68,9 +68,9 @@ void ReceiverClass::TempLow(float temp)
 }
   
   
-void ReceiverClass::temperatureWarningHigh(vector<float> temperatureFetch)
+void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
 {
-  for(float temp:temperatureFetch)
+  for(float temp:temperature)
   {
     checker.TempHigh(temp);
   }
@@ -85,9 +85,9 @@ void ReceiverClass::TempHigh(float temp)
     }
 }
 
-void ReceiverClass::temperatureErrorLow(vector<float> temperatureFetch)
+void ReceiverClass::temperatureErrorLow(vector<float> temperature)
 {
-  for(float temp:temperatureFetch)
+  for(float temp:temperature)
   {
     if(temp <= 0)
     {
@@ -97,9 +97,9 @@ void ReceiverClass::temperatureErrorLow(vector<float> temperatureFetch)
   }
 }
 
-void ReceiverClass::temperatureErrorHigh(vector<float> temperatureFetch)
+void ReceiverClass::temperatureErrorHigh(vector<float> temperature)
 {
-  for(float temp:temperatureFetch)
+  for(float temp:temperature)
   {
     if(temp >= 40)
     {
@@ -109,7 +109,7 @@ void ReceiverClass::temperatureErrorHigh(vector<float> temperatureFetch)
   }
 }
        
-void ReceiverClass::humidityWarning(vector<float> humidityFetch)
+void ReceiverClass::humidityWarning(vector<float> humidity)
 {
   for(float hum:humidity)
   {
@@ -126,7 +126,7 @@ void ReceiverClass::HumidHigh(float hum)
     }
 }
        
-void ReceiverClass::humidityError(vector<float> humidityFetch)
+void ReceiverClass::humidityError(vector<float> humidity)
 {
   for(float hum:humidity)
   {
@@ -140,17 +140,17 @@ void ReceiverClass::humidityError(vector<float> humidityFetch)
 
 int main()
 {
-  //CSVReader reader2("Testdata/dataset.csv");
+  CSVReader reader2("Testdata/dataset.csv");
    ReceiverClass receiverObj;
 vector<float> data1 = receiverObj.temperatureFetch();
   vector<float> data2 = receiverObj.humidityFetch();
   
   if(data1.size()!= 0)
   {
-    receiverObj.temperatureWarningLow(receiverObj.temperatureFetch);
-    receiverObj.temperatureWarningHigh(receiverObj.temperatureFetch);
-    receiverObj.temperatureErrorHigh(receiverObj.temperatureFetch);
-    receiverObj.temperatureErrorLow(receiverObj.temperatureFetch);
+    receiverObj.temperatureWarningLow(temperature);
+    receiverObj.temperatureWarningHigh(temperature);
+    receiverObj.temperatureErrorHigh(temperature);
+    receiverObj.temperatureErrorLow(temperature);
       
   }
   else
@@ -160,8 +160,8 @@ vector<float> data1 = receiverObj.temperatureFetch();
  
   if(data2.size()!= 0)
   {
-    receiverObj.humidityWarning(receiverObj.humidityFetch);
-    receiverObj.humidityError(receiverObj.humidityFetch);
+    receiverObj.humidityWarning(humidity);
+    receiverObj.humidityError(humidity);
   }
     
   else
