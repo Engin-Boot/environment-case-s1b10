@@ -10,7 +10,7 @@ using namespace std;
   int result = Catch::Session().run( argc, argv );
 
   return result;
-}*/
+}
 
 ReceiverClass obj;
 CSVReader reader("Testdata/dataset.csv");
@@ -45,5 +45,5 @@ TEST_CASE("Generate error if Humidity >= 90%")
   obj.humidityError(humidity);
   
   REQUIRE(obj.option == 4);
-}
+}*/
  
