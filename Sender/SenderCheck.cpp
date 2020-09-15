@@ -17,7 +17,7 @@ std::vector<std::vector<std::string> > CSVReader::getData()
     std::ifstream file(fileName);
     std::vector<std::vector<std::string> > dataList;
     std::string line = "";
-    std::string data = "";
+    
     // Iterate through each line and split the content using delimeter
     while (getline(file, line))
     {
@@ -25,7 +25,7 @@ std::vector<std::vector<std::string> > CSVReader::getData()
 
         std::stringstream str(line);
 
-
+         std::string data = "";
         // read every column data of a row and
 
         // store it in a string variable, 'word'
