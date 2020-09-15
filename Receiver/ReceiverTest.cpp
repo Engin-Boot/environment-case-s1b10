@@ -1,9 +1,16 @@
-#define CATCH_CONFIG_MAIN
+#define CATCH_CONFIG_RUNNER
 #include <iostream>
 #include<vector>
 #include "../catch.hpp"
 #include "../Receiver/ReceiverCheck.h"
 using namespace std;
+
+int main( int argc, char* argv[] ) {
+
+  int result = Catch::Session().run( argc, argv );
+
+  return result;
+}
 
 ReceiverClass obj;
 CSVReader reader("Testdata/dataset.csv");
