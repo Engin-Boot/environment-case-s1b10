@@ -1,5 +1,5 @@
 #include "../Receiver/ReceiverCheck.h"
-#include "../catch.hpp"
+#include "../Receiver/catch.hpp"
 using namespace std;
 
 CSVReader reader("Testdata/dataset.csv");
