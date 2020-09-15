@@ -21,7 +21,8 @@ class ReceiverClass
 {
 public:
      int option = 0;
-     void temperatureWarning(vector<float>);
+     void temperatureWarningLow(vector<float>);
+     void temperatureWarningHigh(vector<float>);
      void temperatureError(vector<float>);
      void humidityWarning(vector<float>);
      void humidityError(vector<float>);
