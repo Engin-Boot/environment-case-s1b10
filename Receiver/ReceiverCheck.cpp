@@ -2,8 +2,7 @@
 
 using namespace std;
 
-void TempLow(float);
-void TempHigh(float);
+void Temperature(float);
 
 CSVReader reader("Testdata/dataset.csv");
 
@@ -56,11 +55,11 @@ void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-   TempLow(temp);
+   TemperatureCheck(temp);
   }  
 }
 
-void TempLow(float temp)
+void ReceiverClass::TemperatureCheck(float temp)
 {
    if(temp <= 4 && temp > 0)
     {
@@ -74,18 +73,14 @@ void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-    TempHigh(temp);
-  }
-}
-
-void TempHigh(float temp)
-{
-  if(temp >= 37 && temp < 40)
+    if(temp >= 37 && temp < 40)
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
       checker.option = 1;
     }
+  }
 }
+
 
 void ReceiverClass::temperatureErrorLow(vector<float> temperature)
 {
