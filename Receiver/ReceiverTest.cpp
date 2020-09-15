@@ -12,7 +12,8 @@ vector<float> humidity = reader.humidityFetch();
 
 TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
 {
-  obj.temperatureWarning(temperature);
+  obj.temperatureWarningLow(temperature);
+  obj.temperatureWarningHigh(temperature);
   
   REQUIRE(obj.option == 1);
 }
