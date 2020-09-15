@@ -5,7 +5,7 @@ CSVReader reader("Testdata/dataset.csv");
 
 vector<float> CSVReader::temperatureFetch()
 {
-  vector<float> data;
+  vector<float> data1;
   
   ifstream file(fileName);
   string line = "";
@@ -21,12 +21,12 @@ vector<float> CSVReader::temperatureFetch()
     data.push_back(stof(temperature));
     
   }
-  return data;
+  return data1;
 }
   
 vector<float> CSVReader::humidityFetch()
 {
-  vector<float> data;
+  vector<float> data2;
   ifstream file(fileName);
   string line = "";
   string humidity = "";
@@ -41,7 +41,7 @@ vector<float> CSVReader::humidityFetch()
     
     data.push_back(stof(humidity));
   }
-  return data;
+  return data2;
 }
 
 vector<float> humidity = reader.humidityFetch();
@@ -142,8 +142,8 @@ int main()
 {
   CSVReader reader2;
    ReceiverClass receiverObj;
-vector<float> data = reader2.temperatureFetch();
-  vector<float> data = reader2.humidityFetch();
+vector<float> data1 = reader2.temperatureFetch();
+  vector<float> data2 = reader2.humidityFetch();
   
   if(data.size()!= 0)
   {
