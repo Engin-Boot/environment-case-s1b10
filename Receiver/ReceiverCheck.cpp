@@ -149,7 +149,14 @@ vector<float> data = reader.temperatureFetch();
   {
     receiverObj.temperatureWarningLow(temperature);
     receiverObj.humidityError(humidity);
-    temperatureWarningHigh(temperature)
-{
+    receiverObj.temperatureWarningHigh(temperature);
+     receiverObj.temperatureErrorHigh(temperature);
+      receiverObj.temperatureErrorLow(temperature);
+      receiverObj.humidityWarning(humidity);
+  }
+  else
+  {
+    cout<<"No data received"<<endl;
+  }
   return 0;
 }
