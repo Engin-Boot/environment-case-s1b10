@@ -24,18 +24,15 @@ jobs:
       run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/ReceiverCheck.cpp
  
     - name: static analysis
-      run: cppcheck --enable=all --error-exitcode=1 .
+      run: cppcheck Sender/SenderCheck.cpp --check-config --error-exitcode=1 .
       
     - name: run
-      run: ./SenderExe
-      
-    -name: run
-     run: ./ReceiverExe
+      run: ./SenderExe | ./ReceiverExe
      
     - name: coverage report Sender
 
-      run: gcov -b -c SenderCheck.cpp
+      run: gcov -b -c Sender/SenderCheck.cpp
 
     - name: coverage report Receiver
 
-      run: gcov -b -c ReceiverCheck.cpp 
+      run: gcov -b -c Receiver/ReceiverCheck.cpp 
