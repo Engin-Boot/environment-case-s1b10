@@ -18,7 +18,7 @@ vector<float> CSVReader::temperatureFetch()
     
     getline(str,temperature,',');
     
-    data.push_back(stof(temperature));
+    data1.push_back(stof(temperature));
     
   }
   return data1;
@@ -39,7 +39,7 @@ vector<float> CSVReader::humidityFetch()
     getline(str,humidity,',');
     getline(str,humidity,',');
     
-    data.push_back(stof(humidity));
+    data2.push_back(stof(humidity));
   }
   return data2;
 }
