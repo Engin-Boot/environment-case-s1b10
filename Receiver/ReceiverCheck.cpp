@@ -17,7 +17,6 @@ vector<float> CSVReader::temperatureFetch()
     stringstream str(line);
     
     getline(str,temperature,',');
-    getline(str,humidity,',');
     
     data.push_back(stof(temperature));
     
