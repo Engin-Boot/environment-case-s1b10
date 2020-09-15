@@ -47,16 +47,28 @@ vector<float> temperature = reader.temperatureFetch();
 
 ReceiverClass checker;
 
-void ReceiverClass::temperatureWarning(vector<float> temperature)
+void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
   for(float temp:temperature)
   {
-    if((temp >= 37 && temp < 40)||(temp <= 4 && temp > 0))
+    if(temp <= 4 && temp > 0)
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
       checker.option = 1;  
     }
   }  
+}
+
+void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
+{
+  for(float temp:temperature)
+  {
+    if(temp >= 37 && temp < 40)
+    {
+      cout << "Warning: Current temperature is " << temp << " C" << endl;
+      checker.option = 1;
+    }
+  }
 }
 
 void ReceiverClass::temperatureError(vector<float> temperature)
