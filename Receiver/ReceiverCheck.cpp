@@ -138,7 +138,3 @@ void ReceiverClass::humidityError(vector<float> humidity)
     }
   }
 }
-int main()
-{
-return 0;
-}
