@@ -18,21 +18,21 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y cppcheck
       
     - name: build Sender
-      run: g++ -Wall -Wextra -Werror --coverage -o SenderExe Sender/SenderCheck.cpp
+      run: g++ -Wall -Wextra -Werror --coverage -o SenderExe Sender/*.cpp
 
     - name: build Receiver
-      run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/ReceiverCheck.cpp
+      run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/*.cpp
  
     - name: static analysis
-      run: cppcheck --enable=all --error-exitcode=1 .
+      run: cppcheck --enable=all --check-config --error-exitcode=1 .
       
     - name: run
       run: ./SenderExe | ./ReceiverExe
     
     - name: coverage report Sender
 
-      run: gcov -r Sender/SenderCheck.cpp
+      run: gcov -r SenderCheck.cpp
 
     - name: coverage report Receiver
 
-      run: gcov -r Receiver/ReceiverCheck.cpp
+      run: gcov -r ReceiverCheck.cpp ReceiverTest.cpp
