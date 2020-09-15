@@ -3,7 +3,7 @@ using namespace std;
 
 //CSVReader reader("Testdata/dataset.csv");
 
-vector<float> CSVReader::temperatureFetch()
+vector<float> ReceiverClass::temperatureFetch()
 {
   vector<float> data1;
   
@@ -24,7 +24,7 @@ vector<float> CSVReader::temperatureFetch()
   return data1;
 }
   
-vector<float> CSVReader::humidityFetch()
+vector<float> ReceiverClass::humidityFetch()
 {
   vector<float> data2;
   ifstream file(fileName);
@@ -68,9 +68,9 @@ void ReceiverClass::TempLow(float temp)
 }
   
   
-void ReceiverClass::temperatureWarningHigh(vector<float> temperature)
+void ReceiverClass::temperatureWarningHigh(vector<float> temperatureFetch)
 {
-  for(float temp:temperature)
+  for(float temp:temperatureFetch)
   {
     checker.TempHigh(temp);
   }
@@ -85,9 +85,9 @@ void ReceiverClass::TempHigh(float temp)
     }
 }
 
-void ReceiverClass::temperatureErrorLow(vector<float> temperature)
+void ReceiverClass::temperatureErrorLow(vector<float> temperatureFetch)
 {
-  for(float temp:temperature)
+  for(float temp:temperatureFetch)
   {
     if(temp <= 0)
     {
@@ -97,9 +97,9 @@ void ReceiverClass::temperatureErrorLow(vector<float> temperature)
   }
 }
 
-void ReceiverClass::temperatureErrorHigh(vector<float> temperature)
+void ReceiverClass::temperatureErrorHigh(vector<float> temperatureFetch)
 {
-  for(float temp:temperature)
+  for(float temp:temperatureFetch)
   {
     if(temp >= 40)
     {
@@ -109,7 +109,7 @@ void ReceiverClass::temperatureErrorHigh(vector<float> temperature)
   }
 }
        
-void ReceiverClass::humidityWarning(vector<float> humidity)
+void ReceiverClass::humidityWarning(vector<float> humidityFetch)
 {
   for(float hum:humidity)
   {
@@ -126,7 +126,7 @@ void ReceiverClass::HumidHigh(float hum)
     }
 }
        
-void ReceiverClass::humidityError(vector<float> humidity)
+void ReceiverClass::humidityError(vector<float> humidityFetch)
 {
   for(float hum:humidity)
   {
@@ -147,10 +147,10 @@ vector<float> data1 = receiverObj.temperatureFetch();
   
   if(data1.size()!= 0)
   {
-    receiverObj.temperatureWarningLow(temperatureFetch);
-    receiverObj.temperatureWarningHigh(temperatureFetch);
-    receiverObj.temperatureErrorHigh(temperatureFetch);
-    receiverObj.temperatureErrorLow(temperatureFetch);
+    receiverObj.temperatureWarningLow(receiverObj.temperatureFetch);
+    receiverObj.temperatureWarningHigh(receiverObj.temperatureFetch);
+    receiverObj.temperatureErrorHigh(receiverObj.temperatureFetch);
+    receiverObj.temperatureErrorLow(receiverObj.temperatureFetch);
       
   }
   else
@@ -160,8 +160,8 @@ vector<float> data1 = receiverObj.temperatureFetch();
  
   if(data2.size()!= 0)
   {
-    receiverObj.humidityWarning(humidity);
-    receiverObj.humidityError(humidity);
+    receiverObj.humidityWarning(receiverObj.humidityFetch);
+    receiverObj.humidityError(receiverObj.humidityFetch);
   }
     
   else
