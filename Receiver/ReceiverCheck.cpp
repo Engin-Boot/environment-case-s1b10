@@ -140,5 +140,11 @@ void ReceiverClass::humidityError(vector<float> humidity)
 
 int main()
 {
+  ReceiverClass::temperatureWarningLow(vector<float> temperature);
+  ReceiverClass::temperatureWarningHigh(vector<float> temperature);
+  ReceiverClass::temperatureErrorLow(vector<float> temperature);
+  ReceiverClass::temperatureErrorHigh(vector<float> temperature);
+  ReceiverClass::humidityWarning(vector<float> humidity);
+  ReceiverClass::humidityError(vector<float> humidity);
   return 0;
 }
