@@ -31,8 +31,8 @@ jobs:
      
     - name: coverage report Sender
 
-      run: gcov -b -c Sender/SenderCheck.cpp
+      run: gcov -r Sender/SenderCheck.cpp
 
     - name: coverage report Receiver
 
-      run: gcov -b -c Receiver/ReceiverCheck.cpp 
+      run: gcov -r Receiver/ReceiverCheck.cpp 
