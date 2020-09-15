@@ -27,4 +27,7 @@ public:
      void temperatureErrorHigh(vector<float>);
      void humidityWarning(vector<float>);
      void humidityError(vector<float>);
+     void TempLow(float);
+     void TempHigh(float);
+     void HumidHigh(float);
 };
