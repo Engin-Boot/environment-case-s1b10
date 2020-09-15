@@ -2,6 +2,8 @@
 
 using namespace std;
 
+void Temperature(float);
+
 CSVReader reader("Testdata/dataset.csv");
 
 vector<float> CSVReader::temperatureFetch()
@@ -57,7 +59,7 @@ void ReceiverClass::temperatureWarningLow(vector<float> temperature)
   }  
 }
 
-void Temperature(temp)
+void Temperature(float temp)
 {
    if(temp <= 4 && temp > 0)
     {
