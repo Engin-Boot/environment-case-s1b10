@@ -4,8 +4,6 @@ using namespace std;
 
 CSVReader reader("Testdata/dataset.csv");
 
-int option = 0;
-
 vector<float> CSVReader::temperatureFetch()
 {
   vector<float> data;
@@ -56,7 +54,7 @@ void ReceiverClass::temperatureWarning(vector<float> temperature)
     if((temp >= 37 && temp < 40)||(temp <= 4 && temp > 0))
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
-      option = 1;  
+      ReceiverClass.option = 1;  
     }
   }  
 }
@@ -68,7 +66,7 @@ void ReceiverClass::temperatureError(vector<float> temperature)
     if(temp >= 40 || temp <= 0)
     {
       cout << "Error: Current temperature is " << temp << " C" << endl;
-      option = 2;
+      ReceiverClass.option = 2;
     }
   }
 }
@@ -80,7 +78,7 @@ void ReceiverClass::humidityWarning(vector<float> humidity)
     if(hum >= 70 && hum < 90)
     {
       cout<< "Warning: Current Humidity is " << hum << " %" << endl;
-      option = 3;
+      ReceiverClass.option = 3;
     }
   }
 }
@@ -92,7 +90,7 @@ void ReceiverClass::humidityError(vector<float> humidity)
     if(hum >= 90)
     {
       cout<< "Error: Current Humidity is " << hum << " %" << endl;
-      option = 4;
+      ReceiverClass.option = 4;
     }
   }
 }
