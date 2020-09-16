@@ -1,9 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <iterator>
 #include <string>
-#include <algorithm>
 
 /*
  * A class to read data from a csv file.
