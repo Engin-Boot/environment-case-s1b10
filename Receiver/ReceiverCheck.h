@@ -5,8 +5,6 @@
 #include <fstream>
 #include<sstream>
 #include<vector>
-#include<iterator>
-#include<algorithm>
 using namespace std;
 
 class CSVReader
