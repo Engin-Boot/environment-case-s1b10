@@ -5,7 +5,7 @@
 #include<sstream>
 #include<vector>
 #include "SenderCheck.h"
-
+using namespace std;
 /*std::vector<std::vector<std::string> > CSVReader::getData()
 {
     std::ifstream file(fileName);
