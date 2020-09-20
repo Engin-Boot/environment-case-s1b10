@@ -2,16 +2,16 @@
 #include <fstream>
 #include <vector>
 #include <string>
-
+using namespace std;
 /*
  * A class to read data from a csv file.
  */
 class CSVReader
 {
-    std::string fileName;
-    std::string delimeter;
+    string fileName;
+    string delimeter;
 public:
-    CSVReader(const std::string& filename, const std::string& delm = ",") :
+    CSVReader(const string& filename, const string& delm = ",") :
             fileName(filename), delimeter(delm)
     { }
     // Function to fetch data from a CSV File
