@@ -15,5 +15,7 @@ public:
             fileName(filename), delimeter(delm)
     { }
     // Function to fetch data from a CSV File
-    std::vector<std::vector<std::string> > getData();
+    //std::vector<std::vector<std::string> > getData();
+    vector<float> temperatureFetch();
+    vector<float> humidityFetch();
 };
