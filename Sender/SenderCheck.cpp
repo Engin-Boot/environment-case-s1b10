@@ -107,7 +107,7 @@ int main()
     
     for(float i : result)
     {
-        cout << i << " , " << i + temperature.size() ;
+        cout << i << endl ;
     }
     return 0;
 }
