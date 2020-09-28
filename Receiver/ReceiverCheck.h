@@ -20,6 +20,5 @@ public:
      void TempLow(float temp);
      void TempHigh(float temp);
      void HumidHigh(float hum);
-     vector<float> temperatureFetch();
-     vector<float> humidityFetch();
+     pair<vector<float>,vector<float>> dataFetch();
 };
