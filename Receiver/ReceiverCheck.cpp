@@ -49,9 +49,8 @@ vector<float> ReceiverClass::humidityFetch()
 }*/
 ReceiverClass checker;
 
-vector<float> humidity = checker.humidityFetch();
-
 vector<float> temperature = checker.temperatureFetch();
+vector<float> humidity = checker.humidityFetch();
 
 void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
