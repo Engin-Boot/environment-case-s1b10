@@ -94,5 +94,10 @@ int main()
     vector<float> temperature = reader.temperatureFetch();
     vector<float> humidity = reader.humidityFetch();
     
+    for(float t1 : temperature && float h1 : humidity)
+    {
+        cout << t1 << " , " << h1 << endl;
+    }
+    
     return 0;
 }
