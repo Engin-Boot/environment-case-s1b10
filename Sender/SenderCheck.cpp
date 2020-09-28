@@ -6,20 +6,20 @@
 #include<vector>
 #include "SenderCheck.h"
 using namespace std;
-/*std::vector<std::vector<std::string> > CSVReader::getData()
+vector<vector<string> > CSVReader::getData()
 {
-    std::ifstream file(fileName);
-    std::vector<std::vector<std::string> > dataList;
-    std::string line = "";
+    ifstream file(fileName);
+    vector<vector<string> > dataList;
+    string line = "";
     
     while (getline(file, line))
     {
 
-        std::stringstream str(line);
+        stringstream str(line);
 
-         std::string data = "";
+        string data = "";
 
-        std::vector<std::string> vec;
+        vector<string> vec;
 
         while (getline(str, data, ','))
 
@@ -32,9 +32,9 @@ using namespace std;
     }
     file.close();
     return dataList;
-}*/
+}
 
-vector<float> CSVReader::temperatureFetch()
+/*vector<float> CSVReader::temperatureFetch()
 {
   vector<float> data1;
   
@@ -73,31 +73,31 @@ vector<float> CSVReader::humidityFetch()
     data2.push_back(stof(humidity));
   }
   return data2;
-}
+}*/
 
 int main()
 {
     
     CSVReader reader("Testdata/dataset.csv");
     
-    //std::vector<std::vector<std::string> > dataList = reader.getData();
+    vector<vector<string> > dataList = reader.getData();
     
-    /*for(std::vector<std::string> vec : dataList)
+    for(vector<string> vec : dataList)
     {
-        for(std::string data : vec)
+        for(string data : vec)
         {
-            std::cout<<data << " , ";
+            cout << data << " , ";
         }
-        std::cout<<std::endl;
-    }*/
+        cout << endl;
+    }
     
-    vector<float> temperature = reader.temperatureFetch();
+  /*  vector<float> temperature = reader.temperatureFetch();
     vector<float> humidity = reader.humidityFetch();
     
-    /*for(float t1 : temperature && float h1 : humidity)
+    for(float t1 : temperature && float h1 : humidity)
     {
         cout << t1 << " , " << h1 << endl;
-    }*/
+    }
     
     vector<float> result;
     
@@ -108,6 +108,7 @@ int main()
     for(float i : result)
     {
         cout << i << endl ;
-    }
+    }*/
+    
     return 0;
 }
