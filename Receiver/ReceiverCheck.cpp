@@ -1,6 +1,6 @@
 #include "../Receiver/ReceiverCheck.h"
 using namespace std;
-
+/*
 CSVReader reader("Testdata/dataset.csv");
 
 vector<float> CSVReader::temperatureFetch()
@@ -42,6 +42,12 @@ vector<float> CSVReader::humidityFetch()
     data2.push_back(stof(humidity));
   }
   return data2;
+}
+*/
+bool CheckData(vector<float> value)
+{
+    bool isDataReceived = getline(cin, value).good();
+    return isDataReceived;
 }
 
 vector<float> humidity = reader.humidityFetch();
