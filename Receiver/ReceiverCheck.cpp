@@ -144,20 +144,20 @@ void ReceiverClass::humidityError(vector<float> humidity)
 int main()
 {
   ReceiverClass receiverObj;
-  vector<float> data1 = receiverObj.temperatureFetch();
-  vector<float> data2 = receiverObj.humidityFetch();
+  //vector<float> data1 = receiverObj.temperatureFetch();
+  //vector<float> data2 = receiverObj.humidityFetch();
   
-  for(float i : data1)
+  for(float i : temperature)
     cout << i << " ";
   
   cout << endl;
   
-  for(float j : data2)
+  for(float j : humidity)
     cout << j << " ";
   
   cout << endl;
   
-  if(data1.size()!= 0)
+  if(temperature.size()!= 0)
   {
     receiverObj.temperatureWarningLow(temperature);
     receiverObj.temperatureWarningHigh(temperature);
@@ -170,7 +170,7 @@ int main()
     cout<<"No data received"<<endl;
   }
  
-  if(data2.size()!= 0)
+  if(humidity.size()!= 0)
   {
     receiverObj.humidityWarning(humidity);
     receiverObj.humidityError(humidity);
