@@ -3,27 +3,30 @@ using namespace std;
 
 //CSVReader reader("Testdata/dataset.csv");
 
-vector<float> ReceiverClass::temperatureFetch()
+pair<vector<float>,vector<float>> ReceiverClass::dataFetch()
 {
   vector<float> data1;
+  vector<float> data2;
   
   //ifstream file(fileName);
   string line = "";
   string temperature = "";
+  string humidity = "";
   
   while(getline(cin,line))
   {
     stringstream str(line);
     
     getline(str,temperature,',');
+    getline(str,humidity,',');
     
     data1.push_back(stof(temperature));
-    
+    data2.push_back(stof(humidity));
   }
-  return data1;
+  return {data1,data2};
 }
   
-vector<float> ReceiverClass::humidityFetch()
+/*vector<float> ReceiverClass::humidityFetch()
 {
   vector<float> data2;
   //ifstream file(fileName);
@@ -40,7 +43,7 @@ vector<float> ReceiverClass::humidityFetch()
     data2.push_back(stof(humidity));
   }
   return data2;
-}
+}*/
 
 /*bool CheckData(vector<float> value)
 {
@@ -48,10 +51,11 @@ vector<float> ReceiverClass::humidityFetch()
     return isDataReceived;
 }*/
 ReceiverClass checker;
-ReceiverClass checker2;
 
-vector<float> temperature = checker.temperatureFetch();
-vector<float> humidity = checker2.humidityFetch();
+auto res = checker.dataFetch();
+
+vector<float> temperature = res.first;
+vector<float> humidity = res.second;
 
 void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
