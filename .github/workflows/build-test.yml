@@ -19,15 +19,15 @@ jobs:
       
     - name: build Sender
       run: g++ -Wall -Wextra -Werror --coverage -o SenderExe Sender/SenderCheck.cpp
+      
+    - name: run
+      run: ./SenderExe
 
     - name: build Receiver
       run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/ReceiverCheck.cpp
  
     - name: static analysis
       run: cppcheck  Sender/SenderCheck.cpp --check-config --error-exitcode=1 .
-      
-    - name: run
-      run: ./SenderExe
      
     - name: coverage report Sender
 
