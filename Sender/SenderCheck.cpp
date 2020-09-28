@@ -12,6 +12,7 @@ vector<vector<string> > CSVReader::getData()
     vector<vector<string> > dataList;
     string line = "";
     
+    getline(file,line);
     while (getline(file, line))
     {
 
