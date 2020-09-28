@@ -3,7 +3,7 @@ using namespace std;
 
 //CSVReader reader("Testdata/dataset.csv");
 
-vector<float> CSVReader::temperatureFetch()
+vector<float> ReceiverClass::temperatureFetch()
 {
   vector<float> data1;
   
@@ -23,7 +23,7 @@ vector<float> CSVReader::temperatureFetch()
   return data1;
 }
   
-vector<float> CSVReader::humidityFetch()
+vector<float> ReceiverClass::humidityFetch()
 {
   vector<float> data2;
   //ifstream file(fileName);
@@ -47,12 +47,11 @@ vector<float> CSVReader::humidityFetch()
     bool isDataReceived = getline(cin, value).good();
     return isDataReceived;
 }*/
-
-vector<float> humidity = reader.humidityFetch();
-
-vector<float> temperature = reader.temperatureFetch();
-
 ReceiverClass checker;
+
+vector<float> humidity = checker.humidityFetch();
+
+vector<float> temperature = checker.temperatureFetch();
 
 void ReceiverClass::temperatureWarningLow(vector<float> temperature)
 {
