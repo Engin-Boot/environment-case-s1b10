@@ -147,6 +147,16 @@ int main()
   vector<float> data1 = receiverObj.temperatureFetch();
   vector<float> data2 = receiverObj.humidityFetch();
   
+  for(float i : data1)
+    cout << i << " ";
+  
+  cout << endl;
+  
+  for(float j : data2)
+    cout << j << " ";
+  
+  cout << endl;
+  
   if(data1.size()!= 0)
   {
     receiverObj.temperatureWarningLow(temperature);
