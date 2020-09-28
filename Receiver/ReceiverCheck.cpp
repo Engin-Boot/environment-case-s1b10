@@ -143,10 +143,9 @@ void ReceiverClass::humidityError(vector<float> humidity)
 
 int main()
 {
-  CSVReader reader2("Testdata/dataset.csv");
-   ReceiverClass receiverObj;
-vector<float> data1 = reader2.temperatureFetch();
-  vector<float> data2 = reader2.humidityFetch();
+  ReceiverClass receiverObj;
+  vector<float> data1 = receiverObj.temperatureFetch();
+  vector<float> data2 = receiverObj.humidityFetch();
   
   if(data1.size()!= 0)
   {
