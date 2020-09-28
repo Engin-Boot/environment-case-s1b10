@@ -7,15 +7,6 @@
 #include<vector>
 using namespace std;
 
-class CSVReader
-{
-public:
-     string fileName;
-     vector<float> temperatureFetch();
-     vector<float> humidityFetch();
-     explicit CSVReader(const string& filename): fileName(filename) { }
-};
-
 class ReceiverClass
 {
 public:
@@ -29,4 +20,6 @@ public:
      void TempLow(float temp);
      void TempHigh(float temp);
      void HumidHigh(float hum);
+     vector<float> temperatureFetch();
+     vector<float> humidityFetch();
 };
