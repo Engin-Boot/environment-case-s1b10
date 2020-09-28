@@ -87,7 +87,7 @@ int main()
     {
         for(string data : vec)
         {
-            cout << stof(data);
+            cout << stof(data)<<",";
         }
         cout << endl;
     }
