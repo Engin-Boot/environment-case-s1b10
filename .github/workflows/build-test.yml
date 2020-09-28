@@ -25,6 +25,9 @@ jobs:
 
     - name: build Receiver
       run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/ReceiverCheck.cpp
+    
+    - name: run
+      run: ./ReceiverExe
  
     - name: static analysis
       run: cppcheck  Sender/SenderCheck.cpp --check-config --error-exitcode=1 .
