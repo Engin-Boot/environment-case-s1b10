@@ -116,7 +116,7 @@ void ReceiverClass::humidityWarning(vector<float> humidity)
 {
   for(float hum:humidity)
   {
-    checker.HumidHigh(hum);
+    checker2.HumidHigh(hum);
   }
 }
 
@@ -125,7 +125,7 @@ void ReceiverClass::HumidHigh(float hum)
   if(hum >= 70 && hum < 90)
     {
       cout<< "Warning: Current Humidity is " << hum << " %" << endl;
-      checker.option = 3;
+      checker2.option = 3;
     }
 }
        
