@@ -10,8 +10,8 @@ class CSVReader
 {
     //string fileName;
     //string delimeter;
-/*public:
-    CSVReader(const string& filename, const string& delm = ",") :
+public:
+    /*CSVReader(const string& filename, const string& delm = ",") :
             fileName(filename), delimeter(delm)
     { }*/
     // Function to fetch data from a CSV File
