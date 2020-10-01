@@ -6,9 +6,9 @@
 #include<vector>
 #include "SenderCheck.h"
 using namespace std;
-vector<vector<string> > CSVReader::getData()
+vector<vector<string> > CSVReader::getData(string filename)
 {
-    ifstream file(fileName);
+    ifstream file(filename);
     vector<vector<string> > dataList;
     string line = "";
     
