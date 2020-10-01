@@ -30,7 +30,7 @@ jobs:
       run: ./SenderExe|./ReceiverExe
  
     - name: static analysis
-      run: cppcheck  Sender/SenderCheck.cpp --check-config --error-exitcode=1 .
+      run: cppcheck --enable=all --check-config --error-exitcode=1 .
      
     - name: coverage report Sender
 
