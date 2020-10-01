@@ -79,9 +79,9 @@ vector<float> CSVReader::humidityFetch()
 int main()
 {
     
-    CSVReader reader("Testdata/dataset.csv");
+    //CSVReader reader("Testdata/dataset.csv");
     
-    vector<vector<string> > dataList = reader.getData();
+    vector<vector<string> > dataList = reader.getData("Testdata/dataset.csv");
     
     for(vector<string> vec : dataList)
     {
