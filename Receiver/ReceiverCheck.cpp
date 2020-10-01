@@ -151,7 +151,7 @@ int main()
   //vector<float> data1 = receiverObj.temperatureFetch();
   //vector<float> data2 = receiverObj.humidityFetch();
   
-  for(float i : temperature)
+  /*for(float i : temperature)
     cout << i << " ";
   
   cout << endl;
@@ -159,7 +159,7 @@ int main()
   for(float j : humidity)
     cout << j << " ";
   
-  cout << endl;
+  cout << endl;*/
   
   if(temperature.size()!= 0)
   {
