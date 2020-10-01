@@ -9,7 +9,7 @@ using namespace std;
 CSVReader obj;
 
 TEST_CASE("When valid data file is received by the sender then print data successfully") {
-	string FileName = "Testdata/dataset.csv";
-	string str = obj.getData(FileName);
-	REQUIRE(str == "File read and printed successfully");
+	string reqFileName = "Testdata/dataset.csv";
+	//string str = obj.getData(FileName);
+	REQUIRE(obj.setfilename == reqFileName);
 }
