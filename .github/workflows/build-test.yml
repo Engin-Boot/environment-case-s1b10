@@ -34,7 +34,7 @@ jobs:
      
     - name: coverage report Sender
 
-      run: gcov -b -c SenderTest.cpp
+      run: gcov -b -c SenderCheck.cpp
 
     - name: coverage report Receiver
 
