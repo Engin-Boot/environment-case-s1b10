@@ -28,13 +28,16 @@ jobs:
     
     - name: run
       run: ./SenderExe|./ReceiverExe
+      
+    - name: build SenderTest
+      run: g++ -Wall -Wextra -Werror --coverage -o SenderExe Sender/SenderTest.cpp
  
     - name: static analysis
       run: cppcheck --enable=all --check-config --error-exitcode=1 .
      
     - name: coverage report Sender
 
-      run: gcov -b -c SenderCheck.cpp
+      run: gcov -b -c SenderTest.cpp
 
     - name: coverage report Receiver
 
