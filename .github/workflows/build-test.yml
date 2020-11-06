@@ -30,7 +30,16 @@ jobs:
       run: ./SenderExe|./ReceiverExe
       
     - name: build SenderTest
-      run: g++ -Wall -Wextra -Werror --coverage -o SenderExe Sender/SenderTest.cpp
+      run: g++ -Wall -Wextra -Werror --coverage -o SenderTestExe SenderTest/SenderTest.cpp
+      
+    - name: run
+      run: ./SenderTestExe
+      
+    - name: build ReceiverTest
+      run: g++ -Wall -Wextra -Werror --coverage -o ReceiverTestExe ReceiverTest/ReceiverTest.cpp
+      
+    - name: run
+      run: ./ReceiverTestExe
  
     - name: static analysis
       run: cppcheck --enable=all --check-config --error-exitcode=1 .
