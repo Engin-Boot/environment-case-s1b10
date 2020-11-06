@@ -2,7 +2,7 @@
 
 #include<iostream>
 #include<string>
-#include"catch.hpp"
+#include"../catch.hpp"
 #include"../Sender/Sender.h"
 using namespace std;
 
