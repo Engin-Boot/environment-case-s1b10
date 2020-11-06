@@ -3,7 +3,7 @@
 #include<iostream>
 #include<string>
 #include"../catch.hpp"
-#include"../Sender/Sender.h"
+#include"../Sender/SenderCheck.h"
 using namespace std;
 
 CSVReader obj;
