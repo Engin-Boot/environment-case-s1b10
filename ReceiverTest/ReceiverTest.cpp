@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_MAIN
 #include <iostream>
 #include<vector>
-#include "catch.hpp"
+#include "../catch.hpp"
 #include "../Receiver/ReceiverCheck.h"
 using namespace std;
 
