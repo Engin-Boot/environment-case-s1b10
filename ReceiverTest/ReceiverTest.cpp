@@ -3,14 +3,15 @@
 #include<vector>
 #include "../catch.hpp"
 #include "../Receiver/ReceiverCheck.h"
-#include "../Sender/SenderCheck.h"
 using namespace std;
 
 
 ReceiverClass obj;
-CSVReader reader("Testdata/dataset.csv");
-vector<float> temperature = reader.temperatureFetch();
-vector<float> humidity = reader.humidityFetch();
+auto res = obj.dataFetch();
+
+vector<float> temperature = res.first;
+vector<float> humidity = res.second;
+
 
 TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
 {
