@@ -29,12 +29,6 @@ jobs:
     - name: run
       run: ./SenderExe|./ReceiverExe
       
-    - name: build SenderTest
-      run: g++ -Wall -Wextra -Werror --coverage -o SenderTestExe SenderTest/SenderTest.cpp
-      
-    - name: run
-      run: ./SenderTestExe
-      
     - name: build ReceiverTest
       run: g++ -Wall -Wextra -Werror --coverage -o ReceiverTestExe ReceiverTest/ReceiverTest.cpp
       
