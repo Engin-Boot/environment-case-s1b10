@@ -3,6 +3,7 @@
 #include<vector>
 #include "../catch.hpp"
 #include "../Receiver/ReceiverCheck.h"
+#include "../Sender/SenderCheck.h"
 using namespace std;
 
 
