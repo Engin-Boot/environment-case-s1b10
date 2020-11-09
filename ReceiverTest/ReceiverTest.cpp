@@ -6,7 +6,7 @@
 using namespace std;
 
 
-ReceiverClass obj;
+//ReceiverClass obj;
 auto res = obj.dataFetch();
 
 //vector<float> temperature = res.first;
@@ -17,10 +17,11 @@ vector<float> humidity{80,90,30,40,97,60};
 
 TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
 {
-  //obj.temperatureWarningLow(temperature);
-  //obj.temperatureWarningHigh(temperature);
-  REQUIRE(obj.temperatureWarningLow(temperature) == ("Alert generated"));
-  //REQUIRE(obj.option == 1);
+  ReceiverClass obj;
+  obj.temperatureWarningLow(temperature);
+  obj.temperatureWarningHigh(temperature);
+  //REQUIRE(obj.temperatureWarningLow(temperature) == ("Alert generated"));
+  REQUIRE(obj.option == 1);
 }
 
 /*TEST_CASE("Generate error if Temperature >= 40 C or if Temperature <= 0 C")
