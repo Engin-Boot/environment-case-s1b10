@@ -7,7 +7,7 @@ using namespace std;
 
 
 //ReceiverClass obj;
-auto res = obj.dataFetch();
+//auto res = obj.dataFetch();
 
 //vector<float> temperature = res.first;
 //vector<float> humidity = res.second;
