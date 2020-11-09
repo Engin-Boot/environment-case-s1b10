@@ -9,9 +9,11 @@ using namespace std;
 ReceiverClass obj;
 auto res = obj.dataFetch();
 
-vector<float> temperature = res.first;
-vector<float> humidity = res.second;
+//vector<float> temperature = res.first;
+//vector<float> humidity = res.second;
 
+vector<float> temperature{10,20,30,40,50,60,2};
+vector<float> humidity{80,90,30,40,97,60};
 
 TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
 {
