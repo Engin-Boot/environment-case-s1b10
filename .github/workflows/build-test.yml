@@ -24,7 +24,7 @@ jobs:
       run: ./SenderExe
 
     - name: build Receiver
-      run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/ReceiverCheck.cpp
+      run: g++ -Wall -Wextra -Werror --coverage -o ReceiverExe Receiver/*.cpp
     
     - name: run
       run: ./SenderExe|./ReceiverExe
