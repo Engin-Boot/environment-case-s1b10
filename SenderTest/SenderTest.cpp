@@ -8,7 +8,6 @@ using namespace std;
 
 CSVReader obj;
 
-string setfilename;
 
 TEST_CASE("When valid data file is received by the sender then print data successfully") {
 	string reqFileName = "Testdata/dataset.csv";
