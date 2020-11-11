@@ -9,7 +9,7 @@ using namespace std;
 CSVReader readerobj;
 vector<vector<string> > CSVReader::getData(string filename)
 {
-    setfilename = filename;
+    string setfilename = filename;
     ifstream file(filename);
     vector<vector<string> > dataList;
     string line = "";
