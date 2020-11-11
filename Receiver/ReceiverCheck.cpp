@@ -24,11 +24,12 @@ void ReceiverClass::dataFetch()
     
     //data1.push_back(stof(temperature));
     //data2.push_back(stof(humidity));
-    obj.temperatureWarningLow(temperature);
-    obj.temperatureWarningHigh(temperature);
-    obj.temperatureErrorLow(temperature);
-    obj.temperatureErrorHigh(temperature);
-    obj.humidityWarning(humidity);
+    obj.temperatureWarningLow(stof(temperature));
+    obj.temperatureWarningHigh(stof(temperature));
+    obj.temperatureErrorLow(stof(temperature));
+    obj.temperatureErrorHigh(stof(temperature));
+    obj.humidityWarning(stof(humidity));
+    obj.humidityError(stof(humidity));
   }
   //return {data1,data2};
 }
