@@ -8,6 +8,17 @@
 using namespace std;
 CSVReader readerobj;
 string setfilename;
+
+bool checkValidity(string data)
+{
+   for (unsigned int i = 0; i < data.length(); i++)
+	{
+		if (isdigit(data[i]) == false)
+			return false;
+	}	
+	return true; 
+}
+
 vector<vector<string> > CSVReader::getData(string filename)
 {
     setfilename = filename;
@@ -28,9 +39,23 @@ vector<vector<string> > CSVReader::getData(string filename)
         while (getline(str, data, ','))
 
         {
-
-            vec.push_back(data);
-
+            
+            if(data == "")
+            {
+                setfilename = "The CSV file has empty fields";
+                exit(-1);
+            }
+            
+            else if(!checkValidity(data))
+            {
+                setfilename = "The CSV file has invalid data";
+                exit(-2);
+            }
+            
+            else
+            {
+                vec.push_back(data);
+            }
         }
         dataList.push_back(vec);
     }
