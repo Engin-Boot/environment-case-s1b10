@@ -27,7 +27,7 @@ TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
   obj.temperatureWarningHigh(38.9);
   //obj.temperatureWarningLow(3.7);
   
-  REQUIRE(obj.option == 1);
+  REQUIRE(option == 1);
 }
 
 /*TEST_CASE("Generate error if Temperature >= 40 C or if Temperature <= 0 C")
