@@ -7,9 +7,10 @@
 #include "SenderCheck.h"
 using namespace std;
 CSVReader readerobj;
+string setfilename;
 vector<vector<string> > CSVReader::getData(string filename)
 {
-    string setfilename = filename;
+    setfilename = filename;
     ifstream file(filename);
     vector<vector<string> > dataList;
     string line = "";
