@@ -4,6 +4,9 @@ using namespace std;
 //CSVReader reader("Testdata/dataset.csv");
 
 //pair<vector<float>,vector<float>> ReceiverClass::dataFetch()
+
+int option = 0;
+
 void ReceiverClass::dataFetch()
 {
   //vector<float> data1;
