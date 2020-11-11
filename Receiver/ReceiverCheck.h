@@ -7,7 +7,7 @@
 #include<vector>
 using namespace std;
 
-extern int option = 0;
+extern int option;
 
 class ReceiverClass
 {
