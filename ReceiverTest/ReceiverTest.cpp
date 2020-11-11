@@ -23,8 +23,9 @@ TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
   //REQUIRE(obj.temperatureWarningLow(temperature) == ("Alert generated"));
   REQUIRE(obj.option == 1);*/
   
-  obj.temperatureWarningHigh(38.9);
-  obj.temperatureWarningLow(3.7);
+  //obj.temperatureWarningHigh(38.9);
+  //obj.temperatureWarningLow(3.7);
+  ReceiverClass::temperatureWarningHigh(38.9);
   REQUIRE(obj.option == 1);
 }
 
