@@ -7,10 +7,12 @@
 #include<vector>
 using namespace std;
 
+extern int option = 0;
+
 class ReceiverClass
 {
 public:
-     int option = 0;
+     
      void temperatureWarningLow(float temperature);
      void temperatureWarningHigh(float temperature);
      void temperatureErrorLow(float temperature);
