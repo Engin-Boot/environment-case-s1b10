@@ -78,7 +78,7 @@ void ReceiverClass::TempLow(float temp)
    if(temp <= 4 && temp > 0)
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
-      checker.option = 1;  
+      option = 1;  
     }
 }
   
@@ -96,8 +96,8 @@ void ReceiverClass::TempHigh(float temp)
   if(temp >= 37 && temp < 40)
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
-      checker.option = 1;
-      cout << checker.option << endl;
+      option = 1;
+      cout << option << endl;
     }
 }
 
@@ -108,7 +108,7 @@ void ReceiverClass::temperatureErrorLow(float temperature)
     if(temperature <= 0)
     {
       cout << "Error: Current temperature is " << temperature << " C" << endl;
-      checker.option = 2;
+      option = 2;
     }
   //}
 }
@@ -120,7 +120,7 @@ void ReceiverClass::temperatureErrorHigh(float temperature)
     if(temperature >= 40)
     {
       cout << "Error: Current temperature is " << temperature << " C" << endl;
-      checker.option = 2;
+      option = 2;
     }
   //}
 }
@@ -138,7 +138,7 @@ void ReceiverClass::HumidHigh(float hum)
   if(hum >= 70 && hum < 90)
     {
       cout<< "Warning: Current Humidity is " << hum << " %" << endl;
-      checker.option = 3;
+      option = 3;
     }
 }
        
@@ -149,7 +149,7 @@ void ReceiverClass::humidityError(float humidity)
     if(humidity >= 90)
     {
       cout<< "Error: Current Humidity is " << humidity << " %" << endl;
-      checker.option = 4;
+      option = 4;
     }
   //}
 }
