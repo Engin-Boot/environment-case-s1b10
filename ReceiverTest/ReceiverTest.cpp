@@ -7,7 +7,7 @@ using namespace std;
 
 
 ReceiverClass obj;
-obj.temperatureWarningLow(3.7);
+//obj.temperatureWarningLow(3.7);
 //auto res = obj.dataFetch();
 
 //vector<float> temperature = res.first;
