@@ -78,7 +78,8 @@ vector<float> CSVReader::humidityFetch()
   return data2;
 }*/
 
-int main()
+
+/*int main()
 {
     
     //CSVReader reader("Testdata/dataset.csv");
@@ -92,7 +93,7 @@ int main()
             cout << stof(data) << " , ";
         }
         cout << endl;
-    }
+    }*/
     
   /*  vector<float> temperature = reader.temperatureFetch();
     vector<float> humidity = reader.humidityFetch();
@@ -113,5 +114,5 @@ int main()
         cout << i << endl ;
     }*/
     
-    return 0;
-}
+   // return 0;
+//}
