@@ -147,7 +147,7 @@ void ReceiverClass::humidityError(float humidity)
   //{
     if(humidity >= 90)
     {
-      cout<< "Error: Current Humidity is " << hum << " %" << endl;
+      cout<< "Error: Current Humidity is " << humidity << " %" << endl;
       checker.option = 4;
     }
   //}
