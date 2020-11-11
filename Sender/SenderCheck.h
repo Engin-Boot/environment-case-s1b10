@@ -3,6 +3,8 @@
 #include <vector>
 #include <string>
 using namespace std;
+
+extern string setfilename;
 /*
  * A class to read data from a csv file.
  */
@@ -15,7 +17,7 @@ public:
             fileName(filename), delimeter(delm)
     { }*/
     // Function to fetch data from a CSV File
-    string setfilename;
+    
     //std::vector<std::vector<std::string> > getData(string filename);
     vector<vector<string>> getData(string filename);
     vector<float> temperatureFetch();
