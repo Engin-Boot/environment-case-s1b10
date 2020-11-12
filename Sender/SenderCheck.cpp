@@ -38,7 +38,7 @@ void setCondition(vector<string> row)
 	if(data == "")
 	   setfilename = "The CSV file has empty fields";
 	    
-	if(!checkValidity(data)
+	if(!checkValidity(data))
 	   setfilename = "The CSV file has invalid data";
     }
 }	   
