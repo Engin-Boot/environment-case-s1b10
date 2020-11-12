@@ -9,14 +9,46 @@ using namespace std;
 CSVReader readerobj;
 string setfilename;
 
+void printData(vector<vector<string> > dataList)
+{
+     for(vector<string> vec : dataList)
+     {
+        for(string data : vec)
+        {
+            cout << stof(data) << " , ";
+        }
+        cout << endl;
+     }
+}
+
 bool checkValidity(string data)
 {
-   for (unsigned int i = 0; i < data.length(); i++)
+   for(unsigned int i = 0; i < data.length(); i++)
 	{
 		if (isdigit(data[i]) == false)
 			return false;
 	}	
 	return true; 
+}
+
+void setCondition(vector<string> row)
+{
+    for(string data : row)
+    {
+	if(data == "")
+	   setfilename = "The CSV file has empty fields";
+	    
+	if(!checkValidity(data)
+	   setfilename = "The CSV file has invalid data";
+    }
+}	   
+
+void extractRow(vector<vector<string> > dataList)
+{
+    for(vector<string> vec : dataList)
+    {
+	setCondition(vec);
+    }
 }
 
 vector<vector<string> > CSVReader::getData(string filename)
@@ -40,7 +72,7 @@ vector<vector<string> > CSVReader::getData(string filename)
 
         {
             
-            if(data == "")
+          /*  if(data == "")
             {
                 setfilename = "The CSV file has empty fields";
                 exit(-1);
@@ -53,9 +85,9 @@ vector<vector<string> > CSVReader::getData(string filename)
             }
             
             else
-            {
+            {*/
                 vec.push_back(data);
-            }
+            //}
         }
         dataList.push_back(vec);
     }
