@@ -9,7 +9,7 @@ using namespace std;
 CSVReader readerobj;
 string setfilename;
 
-void printData(vector<vector<string> > dataList)
+void CSVReader::printData(vector<vector<string> > dataList)
 {
      for(vector<string> vec : dataList)
      {
@@ -43,7 +43,7 @@ void setCondition(vector<string> row)
     }
 }	   
 
-void extractRow(vector<vector<string> > dataList)
+void CSVReader::extractRow(vector<vector<string> > dataList)
 {
     for(vector<string> vec : dataList)
     {
