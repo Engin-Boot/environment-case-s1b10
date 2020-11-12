@@ -11,13 +11,13 @@ int main()
     CSVReader reader;
     vector<vector<string> > dataList = reader.getData("Testdata/dataset.csv");
     
-    extractRow(dataList);
+    reader.extractRow(dataList);
     
     if(setfilename == "The CSV file has empty fields" || setfilename == "The CSV file has invalid data")
         cout << setfilename << endl;
     
     else
-        printData(dataList);
+        reader.printData(dataList);
         
    /* for(vector<string> vec : dataList)
     {
