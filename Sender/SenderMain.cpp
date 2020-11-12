@@ -2,6 +2,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+string setfilename;
 
 int main()
 {
@@ -10,14 +11,22 @@ int main()
     CSVReader reader;
     vector<vector<string> > dataList = reader.getData("Testdata/dataset.csv");
     
-    for(vector<string> vec : dataList)
+    satisfy(dataList);
+    
+    if(setfilename == "The CSV file has empty fields" || setfilename == "The CSV file has invalid data")
+        cout << setfilename << endl;
+    
+    else
+        printData(dataList);
+        
+   /* for(vector<string> vec : dataList)
     {
         for(string data : vec)
         {
             cout << stof(data) << " , ";
         }
         cout << endl;
-    }
+    }*/
     
     return 0;
  }
