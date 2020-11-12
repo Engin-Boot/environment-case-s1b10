@@ -20,6 +20,8 @@ public:
     
     //std::vector<std::vector<std::string> > getData(string filename);
     vector<vector<string>> getData(string filename);
-    vector<float> temperatureFetch();
-    vector<float> humidityFetch();
+    void printData(vector<vector<string> > dataList);
+    void extractRow(vector<vector<string> > dataList);
+    //vector<float> temperatureFetch();
+    //vector<float> humidityFetch();
 };
