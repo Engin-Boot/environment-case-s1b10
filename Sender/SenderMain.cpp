@@ -2,6 +2,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<time.h>
 //string setfilename;
 
 int main()
@@ -22,11 +23,20 @@ int main()
     
     reader.extractRow(dataList);
     
-    if(setfilename == "The CSV file has empty fields") /*|| setfilename == "The CSV file has invalid data")*/
-        cout << setfilename << endl;
+    clock_t endwait;  
+    endwait =  300000 ;  
+    //cout<<endwait;  
+    while (clock() < endwait)  
+    {  
+         //cout<<"Please enter the input:";
+        if(setfilename == "The CSV file has empty fields") /*|| setfilename == "The CSV file has invalid data")*/
+            cout << setfilename << endl;
+
+        else
+            reader.printData(dataList);
+    }
     
-    else
-        reader.printData(dataList);
+    
         
    /* for(vector<string> vec : dataList)
     {
