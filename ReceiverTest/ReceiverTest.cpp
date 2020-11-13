@@ -28,26 +28,30 @@ TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
   //obj.temperatureWarningLow(3.7);
   
   REQUIRE(option == 1);
+  
+  obj.temperatureWarningLow(3.7);
+  REQUIRE(option == 1);
 }
 
-/*TEST_CASE("Generate error if Temperature >= 40 C or if Temperature <= 0 C")
+TEST_CASE("Generate error if Temperature >= 40 C or if Temperature <= 0 C")
 {
-  obj.temperatureErrorLow(temperature);
-  obj.temperatureErrorHigh(temperature);
+  obj.temperatureErrorLow(-5);
+  REQUIRE(obj.option == 2);
   
+  obj.temperatureErrorHigh(48.6);
   REQUIRE(obj.option == 2);
 }
 
 TEST_CASE("Generate warning if Humidity >= 70%")
 {
-  obj.humidityWarning(humidity);
+  obj.humidityWarning(85.2);
   
   REQUIRE(obj.option == 3);
 }
 
 TEST_CASE("Generate error if Humidity >= 90%")
 {
-  obj.humidityError(humidity);
+  obj.humidityError(94.8);
   
   REQUIRE(obj.option == 4);
-}*/
+}
