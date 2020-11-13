@@ -20,6 +20,6 @@ TEST_CASE("When a field is empty then the CSV file is invalid") {
 	
 	string fileName = "Testdata/dummy.csv";
 	vector<vector<string>> data = obj.getData(fileName);
-	extractRow(data);
+	obj.extractRow(data);
 	REQUIRE(setfilename == "The CSV file has empty fields");
 }
