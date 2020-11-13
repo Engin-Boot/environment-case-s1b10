@@ -4,6 +4,7 @@
 #include <fstream>
 #include<sstream>
 #include<vector>
+#include<cctype>
 #include "SenderCheck.h"
 using namespace std;
 CSVReader readerobj;
