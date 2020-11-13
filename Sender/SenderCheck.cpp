@@ -39,7 +39,7 @@ void setCondition(vector<string> row)
     {
 	//data.erase(remove(data.begin(), data.end(), '\n'), data.end());
 	//cout << data << "value" << endl;
-	cout << "result: " << isdigit('2') <<endl;
+	//cout << "result: " << isdigit('2') <<endl;
 	if(data == "")
 	{
 	   setfilename = "The CSV file has empty fields";
