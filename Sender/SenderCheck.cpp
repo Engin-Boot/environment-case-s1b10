@@ -71,7 +71,7 @@ vector<vector<string> > CSVReader::getData(string filename)
     while (getline(file, line))
     {
 
-        stringstream str(line);
+        istringstream str(line);
 
         string data = "";
 
