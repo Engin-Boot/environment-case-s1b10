@@ -36,10 +36,15 @@ void setCondition(vector<string> row)
     for(string data : row)
     {
 	if(data == "")
+	{
 	   setfilename = "The CSV file has empty fields";
-	    
+	   cout << "1st if" << endl;
+	}
 	if(!checkValidity(data))
+	{
 	   setfilename = "The CSV file has invalid data";
+	   cout << "2nd if" << endl;
+	}
     }
 }	   
 
