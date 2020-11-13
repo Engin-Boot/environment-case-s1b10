@@ -53,6 +53,7 @@ void setCondition(vector<string> row)
 
 void CSVReader::extractRow(vector<vector<string> > dataList)
 {
+    cout << dataList << endl;
     for(vector<string> vec : dataList)
     {
 	setCondition(vec);
