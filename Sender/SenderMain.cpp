@@ -31,7 +31,7 @@ int main()
         else
             reader.printData(dataList);
         
-        usleep(300000);
+        usleep(300);
     }
     
         
