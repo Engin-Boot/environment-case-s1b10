@@ -24,6 +24,7 @@ void CSVReader::printData(vector<vector<string> > dataList)
 
 bool checkValidity(string data)
 {
+	cout << data << " " <<endl;
    for(unsigned int i = 0; i < data.length(); i++)
 	{
 		if ((isdigit((data[i])) == 0) && (data[i] != '-') && (data[i] != '\n'))
@@ -36,7 +37,7 @@ void setCondition(vector<string> row)
 {
     for(string data : row)
     {
-	cout << data << "value" << endl;
+	//cout << data << "value" << endl;
 	cout << "result: " << isdigit('2') <<endl;
 	if(data == "")
 	{
