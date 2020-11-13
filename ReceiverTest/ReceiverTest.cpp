@@ -36,22 +36,22 @@ TEST_CASE("Generate warning if Temperature >= 37 C or if Temperature <= 4 C")
 TEST_CASE("Generate error if Temperature >= 40 C or if Temperature <= 0 C")
 {
   obj.temperatureErrorLow(-5);
-  REQUIRE(obj.option == 2);
+  REQUIRE(option == 2);
   
   obj.temperatureErrorHigh(48.6);
-  REQUIRE(obj.option == 2);
+  REQUIRE(option == 2);
 }
 
 TEST_CASE("Generate warning if Humidity >= 70%")
 {
   obj.humidityWarning(85.2);
   
-  REQUIRE(obj.option == 3);
+  REQUIRE(option == 3);
 }
 
 TEST_CASE("Generate error if Humidity >= 90%")
 {
   obj.humidityError(94.8);
   
-  REQUIRE(obj.option == 4);
+  REQUIRE(option == 4);
 }
