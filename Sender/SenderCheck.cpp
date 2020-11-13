@@ -26,7 +26,7 @@ bool checkValidity(string data)
 {
    for(unsigned int i = 0; i < data.length(); i++)
 	{
-		if ((isdigit((data[i])) == 0) && (data[i] != '-'))
+		if ((isdigit((data[i])) == 0) && (data[i] != '-') && (data[i] != '\n'))
 			return false;
 	}	
 	return true; 
