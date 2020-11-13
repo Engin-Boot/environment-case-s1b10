@@ -36,7 +36,7 @@ void setCondition(vector<string> row)
 {
     for(string data : row)
     {
-	 //cout << data << endl;
+	cout << data << "value" << endl;
 	cout << "result: " << isdigit('2') <<endl;
 	if(data == "")
 	{
