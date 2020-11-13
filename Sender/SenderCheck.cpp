@@ -22,7 +22,7 @@ void CSVReader::printData(vector<vector<string> > dataList)
      }
 }
 
-bool checkValidity(string data)
+/*bool checkValidity(string data)
 {
 	cout << data << " " <<endl;
    for(unsigned int i = 0; i < data.length(); i++)
@@ -31,13 +31,13 @@ bool checkValidity(string data)
 			return false;
 	}	
 	return true; 
-}
+}*/
 
 void setCondition(vector<string> row)
 {
     for(string data : row)
     {
-	data.erase(remove(data.begin(), data.end(), '\n'), data.end());
+	//data.erase(remove(data.begin(), data.end(), '\n'), data.end());
 	//cout << data << "value" << endl;
 	cout << "result: " << isdigit('2') <<endl;
 	if(data == "")
@@ -45,11 +45,11 @@ void setCondition(vector<string> row)
 	   setfilename = "The CSV file has empty fields";
 	   //cout << "1st if" << endl;
 	}
-	if(!checkValidity(data))
+	/*if(!checkValidity(data))
 	{
 	   setfilename = "The CSV file has invalid data";
 	   cout << "2nd if" << endl;
-	}
+	}*/
     }
 }	   
 
