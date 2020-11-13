@@ -25,7 +25,7 @@ bool checkValidity(string data)
 {
    for(unsigned int i = 0; i < data.length(); i++)
 	{
-		if ((isdigit(data[i]) == false) && (data[i] != '-'))
+		if ((isdigit(stoi(data[i])) == false) && (data[i] != '-'))
 			return false;
 	}	
 	return true; 
@@ -35,16 +35,16 @@ void setCondition(vector<string> row)
 {
     for(string data : row)
     {
-	 cout << data << endl;
+	 //cout << data << endl;
 	if(data == "")
 	{
 	   setfilename = "The CSV file has empty fields";
-	   cout << "1st if" << endl;
+	   //cout << "1st if" << endl;
 	}
 	if(!checkValidity(data))
 	{
 	   setfilename = "The CSV file has invalid data";
-	   cout << "2nd if" << endl;
+	   //cout << "2nd if" << endl;
 	}
     }
 }	   
