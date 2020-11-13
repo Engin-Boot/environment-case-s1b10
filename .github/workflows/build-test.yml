@@ -42,7 +42,7 @@ jobs:
       run: ./ReceiverTestExe
  
     - name: static analysis
-      run: cppcheck --enable=all --check-config --error-exitcode=1 .
+      run: cppcheck --enable=all --check-config --suppress=missingIncludeSystem --error-exitcode=1 .
      
     - name: coverage report Sender
 
