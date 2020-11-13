@@ -2,7 +2,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
-string setfilename;
+//string setfilename;
 
 int main()
 {
