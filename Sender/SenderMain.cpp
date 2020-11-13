@@ -2,7 +2,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
-#include<stdlib.h>
+#include<Windows.h>
 //string setfilename;
 
 int main()
@@ -31,7 +31,7 @@ int main()
         else
             reader.printData(dataList);
         
-        sleep(300000);
+        sleep(300);
     }
     
         
