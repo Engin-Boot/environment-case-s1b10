@@ -36,6 +36,7 @@ void setCondition(vector<string> row)
     for(string data : row)
     {
 	 //cout << data << endl;
+	cout << "result: " << isdigit(2) <<endl;
 	if(data == "")
 	{
 	   setfilename = "The CSV file has empty fields";
