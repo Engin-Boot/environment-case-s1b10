@@ -17,7 +17,7 @@ int main()
         {
             cout << stof(data) << " , ";
         }
-        cout << endl;
+        //cout << endl;
     }
     
     reader.extractRow(dataList);
