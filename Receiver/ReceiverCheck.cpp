@@ -100,7 +100,6 @@ void ReceiverClass::TempHigh(float temp)
     {
       cout << "Warning: Current temperature is " << temp << " C" << endl;
       option = 1;
-      cout << option << endl;
     }
 }
 
