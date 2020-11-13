@@ -44,7 +44,7 @@ void setCondition(vector<string> row)
 	if(!checkValidity(data))
 	{
 	   setfilename = "The CSV file has invalid data";
-	   //cout << "2nd if" << endl;
+	   cout << "2nd if" << endl;
 	}
     }
 }	   
